@@ -1,0 +1,16 @@
+{
+   "makefile.configurations": [
+      {
+         "name": "Default",
+         "makeDirectory": "src"
+      },
+      {
+         "name": "TCG4",
+         "makeDirectory": "src",
+         "makeArgs": [
+            "CC=/opt/crosstool-ng-toolchain-13.3-x86_64-arm-unknown-linux-gnueabihf-octopus/bin/arm-unknown-linux-gnueabihf-gcc",
+            "CFLAGS=-s -std=gnu11 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64"
+         ]
+      }
+   ]   
+} 
