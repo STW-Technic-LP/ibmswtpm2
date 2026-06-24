@@ -11,6 +11,15 @@
             "CC=/opt/crosstool-ng-toolchain-13.3-x86_64-arm-unknown-linux-gnueabihf-octopus/bin/arm-unknown-linux-gnueabihf-gcc",
             "CFLAGS=-s -std=gnu11 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64"
          ]
+      },
+      {
+         "name": "TCG4-YOCTO",
+         "makeDirectory": "src",
+         "makeArgs": [
+            "CC=/opt/oecore-x86_64-tcg4-alpha2/sysroots/x86_64-stwsdk-linux/usr/bin/arm-stw-linux-gnueabi/arm-stw-linux-gnueabi-gcc",
+            "CFLAGS=-s -std=gnu11 -mthumb -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a7 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/oecore-x86_64-tcg4-alpha2/sysroots/cortexa7t2hf-neon-stw-linux-gnueabi",
+            "LDFLAGS=--sysroot=/opt/oecore-x86_64-tcg4-alpha2/sysroots/cortexa7t2hf-neon-stw-linux-gnueabi -Wl,-dynamic-linker=/lib/ld-linux-armhf.so.3 "
+         ]
       }
    ]   
 } 
